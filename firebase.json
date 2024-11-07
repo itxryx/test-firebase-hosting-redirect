@@ -12,6 +12,17 @@
         "destination": "https://example.com",
         "type": 301
       }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
+      }
     ]
   }
 }
