@@ -1,5 +1,19 @@
 {
   "projects": {
-    "default": "PROJECT_NAME"
-  }
+    "default": "test-redirect-20337",
+    "test-redirect": "test-redirect-20337"
+  },
+  "targets": {
+    "test-redirect-20337": {
+      "hosting": {
+        "production": [
+          "itxryx-test-redirect-production"
+        ],
+        "staging": [
+          "itxryx-test-redirect-staging"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
