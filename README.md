@@ -4,11 +4,22 @@ Firebase Hostingで任意のURLにリダイレクトを行うテスト。
 
 ## 使い方
 
-- `.firebaserc`にプロジェクト名を追加
-- `$ npm i`
+```
+$ npm i
 
-1. `firebase.json`を編集
-2. `$ npx firebase deploy`を実行
+// deploy:staging
+$ npx firebase deploy --only hosting:staging
+
+// deploy:production
+$ npx firebase deploy --only hosting:production
+
+// destroy:staging
+$ npx firebase hosting:disable --project test-redirect-20337 --site itxryx-test-redirect-staging
+
+// destroy:production
+$ npx firebase hosting:disable --project test-redirect-20337 --site itxryx-test-redirect-production
+
+```
 
 ## URL
 
