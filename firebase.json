@@ -10,7 +10,7 @@
       {
         "source": "**",
         "destination": "https://example.com",
-        "type": 301
+        "type": 302
       }
     ],
     "headers": [
