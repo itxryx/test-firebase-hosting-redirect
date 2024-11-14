@@ -24,9 +24,13 @@ jobs:
           echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > "${HOME}/firebase-service-account.json"
       - name: Deploy to Firebase (Staging)
         if: github.ref == 'refs/heads/deploy-setting'
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: "${HOME}/firebase-service-account.json"
         run: |
           npx firebase deploy --only hosting:staging --project=${{ secrets.PROJECT_ID }}
       - name: Deploy to Firebase (Production)
         if: github.ref == 'refs/heads/main'
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: "${HOME}/firebase-service-account.json"
         run: |
           npx firebase deploy --only hosting:production --project=${{ secrets.PROJECT_ID }}
