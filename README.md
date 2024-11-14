@@ -21,6 +21,11 @@ $ npx firebase hosting:disable --project test-redirect-20337 --site itxryx-test-
 
 ```
 
+## デプロイ
+
+- mainブランチへの push -> production環境
+- developブランチへの push -> staging環境
+
 ## URL
 
 Firebase Hostingから以下の形式でURLが発行される。
