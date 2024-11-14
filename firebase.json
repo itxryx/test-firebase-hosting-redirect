@@ -47,6 +47,13 @@
           "destination": "/assets/:splat"
         }
       ],
+      "redirects": [
+        {
+          "source": "**",
+          "destination": "https://example.com",
+          "type": 302
+        }
+      ],
       "headers": [
         {
           "source": "**",
