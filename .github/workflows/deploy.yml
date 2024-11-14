@@ -3,7 +3,8 @@ name: Deploy Firebase
 on:
   push:
     branches:
-      - deploy-setting
+      - develop
+      - main
 
 jobs:
   deploy:
@@ -21,9 +22,9 @@ jobs:
         uses: "google-github-actions/auth@v1"
         with:
           credentials_json: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-          access_token_lifetime: 1200s
+          access_token_lifetime: 300s
       - name: Deploy to Firebase (Staging)
-        if: github.ref == 'refs/heads/deploy-setting'
+        if: github.ref == 'refs/heads/develop'
         run: |
           npx firebase deploy --only hosting:staging --project=${{ secrets.PROJECT_ID }}
       - name: Deploy to Firebase (Production)
