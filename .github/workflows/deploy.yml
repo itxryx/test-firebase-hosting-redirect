@@ -25,10 +25,8 @@ jobs:
       - name: Deploy to Firebase (Staging)
         if: github.ref == 'refs/heads/deploy-setting'
         run: |
-          firebase projects:add ${{ secrets.PROJECT_ID }}
-          npx firebase deploy --only hosting:staging
+          npx firebase deploy --only hosting:staging --project=${{ secrets.PROJECT_ID }}
       - name: Deploy to Firebase (Production)
         if: github.ref == 'refs/heads/main'
         run: |
-          firebase projects:add ${{ secrets.PROJECT_ID }}
-          npx firebase deploy --only hosting:production
+          npx firebase deploy --only hosting:production --project=${{ secrets.PROJECT_ID }}
