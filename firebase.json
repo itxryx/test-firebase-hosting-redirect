@@ -8,12 +8,13 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "redirects": [
+      "rewrites": [
         {
           "source": "/assets/**",
-          "destination": "/assets/:splat",
-          "type": 200
-        },
+          "destination": "/assets/:splat"
+        }
+      ],
+      "redirects": [
         {
           "source": "**",
           "destination": "https://example.com",
@@ -40,12 +41,13 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "redirects": [
+      "rewrites": [
         {
           "source": "/assets/**",
-          "destination": "/assets/:splat",
-          "type": 200
-        },
+          "destination": "/assets/:splat"
+        }
+      ],
+      "redirects": [
         {
           "source": "**",
           "destination": "https://example.com",
