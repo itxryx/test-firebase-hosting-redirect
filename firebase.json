@@ -10,6 +10,11 @@
       ],
       "redirects": [
         {
+          "source": "/assets/**",
+          "destination": "/assets/:splat",
+          "type": 200
+        },
+        {
           "source": "**",
           "destination": "https://example.com",
           "type": 302
@@ -36,6 +41,11 @@
         "**/node_modules/**"
       ],
       "redirects": [
+        {
+          "source": "/assets/**",
+          "destination": "/assets/:splat",
+          "type": 200
+        },
         {
           "source": "**",
           "destination": "https://example.com",
